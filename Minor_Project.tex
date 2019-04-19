@@ -1,0 +1,129 @@
+\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{ {images} }
+
+%---------------------------------------------------------------
+
+\parindent 0pt
+\parskip 0.45ex
+\renewcommand{\baselinestretch}{1.03}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\textfraction}{0.01}
+\renewcommand{\floatpagefraction}{0.99} 
+
+%\pagestyle{empty}
+
+\title{SiPM Related Title}
+\author{Luke Chaplinsky }
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+sPHENIX is a new nuclear physics experiment under construction at the
+Relativistic Heavy Ion Collider (RHIC) at the Brookhaven National
+Laboratory~\cite{Adare:2015kwa}. Fig.~\ref{fig:sPHENIXArtistsView}
+shows an artist's view of the experiment and its various detector
+components.
+
+\begin{figure}[tbh]
+\centering \includegraphics[angle=270,width=0.8\textwidth]{images/sPHENIX_artistsview.pdf}
+\caption{\label{fig:sPHENIXArtistsView}
+  An artist's view of the sPHENIX experiment under construction.
+}
+\end{figure}
+
+\begin{figure}[tbh]
+\centering \includegraphics[angle=90,width=0.8\textwidth]{images/BabarMagnet}
+\caption{\label{fig:BabarMagnet} A picture of the former BaBar
+  superconducting magnet arriving at Brookhaven National Laboratory.
+}
+\end{figure}
+
+\begin{figure}[tbh]
+\centering \includegraphics[width=0.8\textwidth]{images/Sector_Tilt_R4}
+\centering \includegraphics[width=0.8\textwidth]{images/SectorMockup}
+
+\caption{\label{fig:EmcalSector} Top: A rendering of one sector of the
+  electromagnetic calorimeter.  Bottom: A picture of a 3d-printed
+  mockup of one sector support structure.  The RHIC collision point
+  would be located right underneath the leftmost end. Another
+  structure like this (but mirrored) will then form the other half of
+  the assembly.
+}
+\end{figure}
+
+\begin{figure}[tbh]
+\centering \includegraphics[angle=270,width=0.8\textwidth]{images/EmcalBlockAssembly.jpg}
+\caption{\label{fig:EmcalBlockAssembly} A picture of individual blocks with mounted carrier boards. One can see the 4 pyramid-shaped light guides that bundle the light onto 4 groups of 4 SiPMs (not visible in this picture). The copper lines are for cooling of the electronics. 
+}
+\end{figure}
+
+
+The ``backbone'' of the experiment is the superconducting solenoid
+magnet from the former BaBar experiment (shown in
+Fig.~\ref{fig:BabarMagnet}). Except for the outermost Hadronic
+Calorimeter, all detector components are located inside the magnetic
+field.
+
+
+One of the detectors of the future sPHENIX experiment is the
+electromagnetic calorimeter. It will be read out with about 25,000
+Silicon Photomultipliers (SiPMs). The choice of SiPMs is obvious due
+to space constraints inside the magnet, and the requirement to be able
+to operate in a magnetic field.
+
+The calorimeter consists of two halves, and each of those is built
+from sectors with 96 individual calorimeter ``towers'', or blocks. 32
+of such sectors will eventually form a cylinder that goes all around the beam pipe, giving the experiment full azimuthal coverage. The
+calorimeter is designed to be \emph{projective}, meaning that each
+tower ``looks'' straight at the RHIC collision point. In this way,
+each set of towers is different, and their shape depends on the
+distance from the collision point. The towers further away ``lean'' at
+increasing angles towards the collision point.
+
+
+This is shown in Fig.~\ref{fig:EmcalSector}, which shows an
+engineering rendering of a sector, and a mock-up of a sector support
+structure at the bottom. The RHIC collision point would be located
+right underneath the leftmost end with the non-tilted towers. Another
+structure like this (only mirrored) will then form the other half of
+the assembly that extends to the left. 
+
+The SiPMs for the electromagnetic calorimeter are mounted on so-called
+carrier boards that will later be attached to the front of each
+module. Each tower has 4 short pyramid-shaped light guides that bundle
+the light produced in the tower onto 4 SiPMs, so that each carrier board has 4 clusters of 4 SiPMs (16 total).
+
+\section{Purpose of this project}
+Each cluster of 4 SiPMs that read out an individual light guide share a bias supply voltage and readout channel. For that reason, the SiPMs delivered by the manufacturer (Hamamatsu) have been pre-selected to have the same gain. The manufacturer's measurements are again individually verified by another sPHENIX collaborating institute before being mounted on a carrier board.
+
+The purpose of this project is to develop an largely automated procedure to measure how well the goal of having gain-matched SiPMs on a particular readout channel has been accomplished, and to verify that the finished carrier boards are performing according to the specifications. 
+
+\section{Measurements}
+
+ In this way, a carrier board has 4 individual signal lines, one from each cluster. In order to be able to use one supply voltage only, SiPMs with approximately the same gain at the same supply voltage are preselected by the manufacturer and placed together in a given cluster. We know the individual bias voltages for each cluster for a uniform gain setting.
+
+Factory determined bias voltages were set for each cluster. Since the SiPMs were illuminated one at a time, a common supply was used for all 4 clusters and the required voltage was adjusted accordingly. Each SiPM was characterized by exposure to short LED light pulses transmitted through a light fiber. The waveforms for each individual SiPM were recorded using a DRS4 Evaluation Board. The current drawn while pulsing a given SiPM was also recorded. % The current drawn by the LED itself? Or the current produced by the waveform in the SiPM?
+
+
+\section{Analysis and Results}
+
+
+
+\section{Summary and Conclusions}
+
+
+
+\section{Acknowledgements}
+
+
+
+\bibliographystyle{unsrt}
+\bibliography{report}
+
+
+\end{document}
